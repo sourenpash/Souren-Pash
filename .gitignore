@@ -40,3 +40,6 @@ souren/projects/2025_AER1217_Project.pdf
 *.mov
 *.avi
 *.mkv
+
+# Small optimized website media that is safe to host through GitHub Pages
+!souren/pictures/breadbot-cutting.mp4

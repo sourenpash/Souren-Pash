@@ -20,6 +20,40 @@
       border-radius: 6px;
       display: block;
     }
+    .breadbot-cycler {
+      position: relative;
+      width: 160px;
+      height: 160px;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #fafafa;
+      border: 1px solid #ececec;
+    }
+    .breadbot-cycler img,
+    .breadbot-cycler video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      animation: breadbot-cycle 18s linear infinite;
+    }
+    .breadbot-cycler video {
+      object-fit: cover;
+    }
+    .breadbot-cycler img {
+      object-fit: contain;
+    }
+    .breadbot-cycler video:nth-child(1) { animation-delay: 0s; }
+    .breadbot-cycler img:nth-child(2) { animation-delay: 6s; }
+    .breadbot-cycler img:nth-child(3) { animation-delay: 12s; }
+    @keyframes breadbot-cycle {
+      0%      { opacity: 0; }
+      3%      { opacity: 1; }
+      30.33%  { opacity: 1; }
+      33.33%  { opacity: 0; }
+      100%    { opacity: 0; }
+    }
     .placeholder-thumb {
       width: 160px;
       height: 160px;
@@ -410,7 +444,13 @@
 
               <tr>
                 <td style="padding:16px;width:20%;vertical-align:middle">
-                  <img class="proj-thumb" src="souren/pictures/breadbot.jpeg" alt="Breadbot">
+                  <div class="breadbot-cycler" aria-label="Breadbot media preview">
+                    <video autoplay muted loop playsinline preload="metadata" poster="souren/pictures/breadbot1.png">
+                      <source src="souren/pictures/breadbot-cutting.mp4" type="video/mp4">
+                    </video>
+                    <img src="souren/pictures/breadbot.jpeg" alt="Breadbot CAD render">
+                    <img src="souren/pictures/breadbot1.png" alt="Breadbot prototype cutting bread">
+                  </div>
                 </td>
                 <td style="padding:8px;width:80%;vertical-align:middle">
                   <span class="papertitle">Breadbot: Automated Bread Cutting Machine</span>
