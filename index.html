@@ -11,6 +11,15 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
   <style>
+    .proj-thumb {
+      width: 160px;
+      height: 160px;
+      object-fit: contain;
+      background: #fafafa;
+      border: 1px solid #ececec;
+      border-radius: 6px;
+      display: block;
+    }
     .placeholder-thumb {
       width: 160px;
       height: 160px;
@@ -19,7 +28,7 @@
       justify-content: center;
       background: repeating-linear-gradient(45deg, #e8e8e8, #e8e8e8 8px, #f4f4f4 8px, #f4f4f4 16px);
       border: 1px solid #d0d0d0;
-      border-radius: 4px;
+      border-radius: 6px;
       color: #666;
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
       font-size: 18px;
@@ -74,17 +83,17 @@
       position: relative;
       width: 160px;
       height: 160px;
-      border-radius: 22px;
+      border-radius: 6px;
       overflow: hidden;
       background: #111;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+      border: 1px solid #ececec;
     }
     .app-cycler img {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       opacity: 0;
       animation: app-cycle 18s linear infinite;
     }
@@ -103,6 +112,69 @@
       11.11%  { opacity: 1; }
       13.11%  { opacity: 0; }
       100%    { opacity: 0; }
+    }
+
+    details.other-projects {
+      margin: 4px 16px 18px 16px;
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    }
+    details.other-projects summary {
+      cursor: pointer;
+      padding: 10px 16px;
+      background: #f5f5f5;
+      border: 1px solid #e6e6e6;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 15px;
+      list-style: none;
+      user-select: none;
+    }
+    details.other-projects summary::-webkit-details-marker { display: none; }
+    details.other-projects summary::after {
+      content: "+";
+      float: right;
+      color: #888;
+      font-weight: 400;
+    }
+    details.other-projects[open] summary::after { content: "\2212"; }
+    details.other-projects[open] summary {
+      border-radius: 8px 8px 0 0;
+      border-bottom: none;
+    }
+    details.other-projects ul {
+      margin: 0;
+      padding: 12px 18px 12px 36px;
+      background: #fafafa;
+      border: 1px solid #e6e6e6;
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+    }
+    details.other-projects li {
+      margin: 6px 0;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #333;
+    }
+    details.other-projects li .meta {
+      color: #777;
+      font-style: italic;
+      font-size: 12px;
+      margin-left: 4px;
+    }
+    details.other-projects li.with-thumb {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      list-style: none;
+      margin-left: -22px;
+    }
+    details.other-projects .op-thumb {
+      width: 96px;
+      height: 96px;
+      object-fit: cover;
+      border-radius: 6px;
+      flex-shrink: 0;
+      border: 1px solid #e0e0e0;
     }
   </style>
 </head>
@@ -172,7 +244,7 @@
 
               <tr>
                 <td style="padding:16px;width:20%;vertical-align:middle">
-                  <img src="souren/pictures/ExpressMM_paper_arch.svg" alt="ExpressMM" width="160">
+                  <img class="proj-thumb" src="souren/pictures/ExpressMM_paper_arch.svg" alt="ExpressMM">
                 </td>
                 <td style="padding:8px;width:80%;vertical-align:middle">
                   <a href="https://arxiv.org/abs/2604.05320">
@@ -203,7 +275,7 @@
 
               <tr>
                 <td style="padding:16px;width:20%;vertical-align:middle">
-                  <img src="souren/pictures/povnet+.png" alt="POVNet+" width="160">
+                  <img class="proj-thumb" src="souren/pictures/povnet+.png" alt="POVNet+">
                 </td>
                 <td style="padding:8px;width:80%;vertical-align:middle">
                   <a href="https://arxiv.org/abs/2602.00131">
@@ -234,7 +306,7 @@
 
               <tr>
                 <td style="padding:16px;width:20%;vertical-align:middle">
-                  <img src="souren/pictures/litarture%20review%201.svg" alt="Healthcare LLM review" width="160">
+                  <img class="proj-thumb" src="souren/pictures/litarture%20review%201.svg" alt="Healthcare LLM review">
                 </td>
                 <td style="padding:8px;width:80%;vertical-align:middle">
                   <a href="https://www.mdpi.com/2218-6581/13/8/112">
@@ -261,7 +333,7 @@
 
               <tr>
                 <td style="padding:16px;width:20%;vertical-align:middle">
-                  <img src="souren/pictures/lecturegpt.svg" alt="LectureGPT" width="160">
+                  <img class="proj-thumb" src="souren/pictures/lecturegpt.svg" alt="LectureGPT">
                 </td>
                 <td style="padding:8px;width:80%;vertical-align:middle">
                   <span class="papertitle">LectureGPT: An LLM-Based Multimodal Lecturing Pipeline for Socially Assistive Humanoid Robots</span>
@@ -287,7 +359,7 @@
 
               <tr>
                 <td style="padding:16px;width:20%;vertical-align:middle">
-                  <img src="souren/pictures/Design%20and%20Development%20of%20a%20Novel%20Haptic%20Device.png" alt="Haptic Device" width="160">
+                  <img class="proj-thumb" src="souren/pictures/Design%20and%20Development%20of%20a%20Novel%20Haptic%20Device.png" alt="Haptic Device">
                 </td>
                 <td style="padding:8px;width:80%;vertical-align:middle">
                   <a href="souren/papers/Design_and_Development_of_a_Novel_Haptic_Device_for_Plucked_Musical_Instrument_AR_Simulation.pdf">
@@ -338,7 +410,108 @@
 
               <tr>
                 <td style="padding:16px;width:20%;vertical-align:middle">
-                  <img src="souren/pictures/gasdrone.jpeg" alt="Gas-powered VTOL" width="160">
+                  <img class="proj-thumb" src="souren/pictures/breadbot.jpeg" alt="Breadbot">
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <span class="papertitle">Breadbot: Automated Bread Cutting Machine</span>
+                  <br>
+                  <strong>Souren Pashangpour</strong>, Mahyar Tajeri, Gibran Rajput
+                  <br>
+                  <em>2025&ndash;2026</em>
+                  <p></p>
+                  <p>
+                    A custom bread-processing machine for restaurant operations. My role was mainly system design
+                    and technical blueprinting: defining the overall architecture, breaking the machine into
+                    mechanical / electrical / software subsystems, selecting key components, and guiding early
+                    design iterations so the team could move from concept to buildable hardware. I also assisted
+                    across hardware and software design, and developed an in-house sensing approach: a
+                    rotary-encoder lever gauge that mechanically maps loaf topology so cuts can be adjusted around
+                    weak points in the bread and meet slice-height / trimming requirements.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <img class="proj-thumb" src="souren/pictures/drone%20racing%20scene.jpg" alt="Crazyflie drone racing">
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <span class="papertitle">Autonomous Drone Racing with the Crazyflie (AER1217)</span>
+                  <br>
+                  <strong>Souren Pashangpour</strong> et al.
+                  <br>
+                  <em>AER1217 &mdash; Development of Autonomous UAS, UTIAS</em>, 2025
+                  <p></p>
+                  <p>
+                    Full perception, planning, and control stack for an autonomous Crazyflie navigating a
+                    gate-based racing course. Combines on-board state estimation with a trajectory planner
+                    that respects the quadrotor's actuation limits, achieving consistent gate fly-throughs
+                    in flight tests.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <img class="proj-thumb" src="souren/pictures/sleep%20onset%20prediction%20inteligent%20sensor%20networks.png" alt="Sleep onset">
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="souren/projects/sleep_onset_prediction.pdf">
+                    <span class="papertitle">Sleep-Onset Prediction with Intelligent Sensor Networks</span>
+                  </a>
+                  <br>
+                  <strong>Souren Pashangpour</strong>, Sohrab Roointan
+                  <br>
+                  <em>Course project, Intelligent Sensor Networks</em>, 2024
+                  <br>
+                  <a href="souren/projects/sleep_onset_prediction.pdf">slides (PDF)</a>
+                  <p></p>
+                  <p>
+                    A distributed intelligent sensor network for comfort monitoring and sleep-onset prediction.
+                    ESP32-S3 sensing hubs placed at the bedside, window, and door collect localized temperature,
+                    humidity, light, acoustic, BLE/RSSI, and indoor&ndash;outdoor gradient data, then stream
+                    calibrated and Kalman-filtered readings to a central server over TCP. The server builds a
+                    spatio-temporal semantic map using inverse-distance weighting between nodes, estimates room
+                    thermal dynamics with a first-order ODE, and uses camera-derived posture/presence labels only
+                    as supervision for training a logistic-regression model to predict sleep-related state
+                    transitions and recommend proactive climate-control actions.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <img class="proj-thumb" src="souren/projects/RL%20project.gif" alt="RL Project">
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="https://github.com/ghssx19/RL-Project-Gym">
+                    <span class="papertitle">Autonomous RL Racing with Strategic Decision Making</span>
+                  </a>
+                  <br>
+                  <strong>Souren Pashangpour</strong>,
+                  Gibran A. Rajput,
+                  Zicheng Wang
+                  <br>
+                  <em>Course project</em>, 2023
+                  <br>
+                  <a href="https://github.com/ghssx19/RL-Project-Gym">code</a>
+                  /
+                  <a href="souren/projects/SP-GR-ZW-Autonomous%20RL%20Racing%20With%20Strategic%20Decision%20Making-1.pdf">report (PDF)</a>
+                  <p></p>
+                  <p>
+                    A hierarchical reinforcement-learning racing framework that combines high-level
+                    macro-action planning with low-level vehicle control. A PPO-based strategic layer decides
+                    when to continue driving or take pit stops under fuel and tire-wear constraints, while a
+                    pre-trained PPO-LSTM visual controller handles steering, throttle, and braking. Trained in
+                    simulated racetracks over roughly 28 hours, the system reduced unnecessary pit stops and
+                    achieved faster lap times than a human baseline in controlled trials.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <img class="proj-thumb" src="souren/pictures/gasdrone.jpeg" alt="Gas-powered VTOL">
                 </td>
                 <td style="padding:8px;width:80%;vertical-align:middle">
                   <a href="souren/projects/Conference%20Paper%20for%20gas%20drone.docx.pdf">
@@ -370,109 +543,75 @@
                 </td>
               </tr>
 
-              <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle">
-                  <img src="souren/pictures/drone%20racing%20scene.jpg" alt="Crazyflie drone racing" width="160">
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
-                  <span class="papertitle">Autonomous Drone Racing with the Crazyflie (AER1217)</span>
-                  <br>
-                  <strong>Souren Pashangpour</strong> et al.
-                  <br>
-                  <em>AER1217 &mdash; Development of Autonomous UAS, UTIAS</em>, 2025
-                  <p></p>
-                  <p>
-                    Full perception, planning, and control stack for an autonomous Crazyflie navigating a
-                    gate-based racing course. Combines on-board state estimation with a trajectory planner
-                    that respects the quadrotor's actuation limits, achieving consistent gate fly-throughs
-                    in flight tests.
-                  </p>
-                </td>
-              </tr>
-
-              <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle">
-                  <img src="souren/pictures/sleep%20onset%20prediction%20inteligent%20sensor%20networks.png" alt="Sleep onset" width="160">
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
-                  <a href="souren/projects/sleep_onset_prediction.pdf">
-                    <span class="papertitle">Sleep-Onset Prediction with Intelligent Sensor Networks</span>
-                  </a>
-                  <br>
-                  <strong>Souren Pashangpour</strong>, Sohrab Roointan
-                  <br>
-                  <em>Course project, Intelligent Sensor Networks</em>, 2024
-                  <br>
-                  <a href="souren/projects/sleep_onset_prediction.pdf">slides (PDF)</a>
-                  <p></p>
-                  <p>
-                    A distributed intelligent sensor network for comfort monitoring and sleep-onset prediction.
-                    ESP32-S3 sensing hubs placed at the bedside, window, and door collect localized temperature,
-                    humidity, light, acoustic, BLE/RSSI, and indoor&ndash;outdoor gradient data, then stream
-                    calibrated and Kalman-filtered readings to a central server over TCP. The server builds a
-                    spatio-temporal semantic map using inverse-distance weighting between nodes, estimates room
-                    thermal dynamics with a first-order ODE, and uses camera-derived posture/presence labels only
-                    as supervision for training a logistic-regression model to predict sleep-related state
-                    transitions and recommend proactive climate-control actions.
-                  </p>
-                </td>
-              </tr>
-
-              <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle">
-                  <img src="souren/projects/RL%20project.gif" alt="RL Project" width="160">
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
-                  <a href="https://github.com/ghssx19/RL-Project-Gym">
-                    <span class="papertitle">Autonomous RL Racing with Strategic Decision Making</span>
-                  </a>
-                  <br>
-                  <strong>Souren Pashangpour</strong>,
-                  Gibran A. Rajput,
-                  Zicheng Wang
-                  <br>
-                  <em>Course project</em>, 2023
-                  <br>
-                  <a href="https://github.com/ghssx19/RL-Project-Gym">code</a>
-                  /
-                  <a href="souren/projects/SP-GR-ZW-Autonomous%20RL%20Racing%20With%20Strategic%20Decision%20Making-1.pdf">report (PDF)</a>
-                  <p></p>
-                  <p>
-                    A hierarchical reinforcement-learning racing framework that combines high-level
-                    macro-action planning with low-level vehicle control. A PPO-based strategic layer decides
-                    when to continue driving or take pit stops under fuel and tire-wear constraints, while a
-                    pre-trained PPO-LSTM visual controller handles steering, throttle, and braking. Trained in
-                    simulated racetracks over roughly 28 hours, the system reduced unnecessary pit stops and
-                    achieved faster lap times than a human baseline in controlled trials.
-                  </p>
-                </td>
-              </tr>
-
-              <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle">
-                  <img src="souren/pictures/breadbot.jpeg" alt="Breadbot" width="160">
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
-                  <span class="papertitle">Breadbot: Automated Bread Cutting Machine</span>
-                  <br>
-                  <strong>Souren Pashangpour</strong>, Mahyar Tajeri, Gibran Rajput
-                  <br>
-                  <em>2025&ndash;2026</em>
-                  <p></p>
-                  <p>
-                    A custom bread-processing machine for restaurant operations. My role was mainly system design
-                    and technical blueprinting: defining the overall architecture, breaking the machine into
-                    mechanical / electrical / software subsystems, selecting key components, and guiding early
-                    design iterations so the team could move from concept to buildable hardware. I also assisted
-                    across hardware and software design, and developed an in-house sensing approach: a
-                    rotary-encoder lever gauge that mechanically maps loaf topology so cuts can be adjusted around
-                    weak points in the bread and meet slice-height / trimming requirements.
-                  </p>
-                </td>
-              </tr>
-
             </tbody>
           </table>
+
+          <details class="other-projects">
+            <summary>Other Projects</summary>
+            <ul>
+              <li class="with-thumb">
+                <img class="op-thumb" src="souren/pictures/hackathon.jpg" alt="">
+                <div>
+                  <a href="https://devpost.com/software/team-tmu-vaxter"><strong>Vaxter</strong></a>
+                  <span class="meta">UTRA Hacks 2025</span>
+                  <br>
+                  An AI health companion built with Mahyar and teammates that combined a NAO robot and a
+                  TurtleBot using ROS / C++, Python, OpenCV, PyTorch, Whisper STT, TTS, and multimodal LLMs.
+                  The robot followed users, recognized objects, and provided health and activity reminders,
+                  with real-time tracking, navigation, speech, and AI processing all running under hackathon
+                  time constraints.
+                </div>
+              </li>
+              <li class="with-thumb">
+                <img class="op-thumb" src="souren/pictures/single%20actuator.png" alt="">
+                <div>
+                  <strong>Single-Actuator Car</strong>
+                  <br>
+                  Designed a four-wheel-drive miniature car capable of moving in all four directions using one
+                  actuator and a custom gearbox, 3D-printed assemblies, obstacle-avoidance logic, and a
+                  CoppeliaSim simulation.
+                </div>
+              </li>
+              <li class="with-thumb">
+                <img class="op-thumb" src="souren/pictures/pendulum.jpg" alt="">
+                <div>
+                  <strong>Inverted Pendulum System</strong>
+                  <br>
+                  Designed and built a reaction-wheel inverted pendulum, including the mechanical CAD,
+                  Simulink model, PID control, and real-time system feedback.
+                </div>
+              </li>
+              <li>
+                <strong>Quadruped Obstacle Course</strong>
+                <br>
+                Built physical obstacle-course elements in the lab for quadruped locomotion experiments
+                and sim-to-real testing.
+              </li>
+              <li>
+                <strong>Solar Intensity Tracker</strong>
+                <br>
+                An electromechanical sun-following system that uses photoresistors to track light intensity
+                over time, logs measurements to an SD card, and enables later analysis of brightness changes
+                throughout the day.
+              </li>
+              <li>
+                <strong>Photo Deletion App</strong>
+                <br>
+                A personal phone app to quickly delete gallery photos by swiping &mdash; built because I was
+                too lazy to clean my gallery manually and didn't want to pay for an App Store app.
+              </li>
+              <li>
+                <strong>TheTutors Website</strong>
+                &mdash; <a href="https://thetutors.company/">thetutors.company</a>
+              </li>
+              <li>
+                <strong>Machine-Learning Side Projects</strong>
+                <br>
+                A failed-3D-print detection model trained on scraped images, and OpenCV image-sorting tools
+                based on image features and time-of-day lighting.
+              </li>
+            </ul>
+          </details>
 
           <!-- ============== WEB APPS ============== -->
           <table
@@ -634,6 +773,17 @@
                   <span class="meta">TA</span>
                 </div>
                 <div class="role-detail">Graduate course on robots for clinical and home-care settings.</div>
+              </div>
+              <div class="entry">
+                <div class="role-line">
+                  <a href="https://engineering.calendar.utoronto.ca/course/mie354h1">MIE&nbsp;354 &mdash; Business Process Engineering</a>
+                  <span class="meta">TA &middot; Sep&ndash;Dec 2023</span>
+                </div>
+                <div class="role-detail">
+                  Built tests, solutions, and 8 weeks of lab assignments around BPMN and Java; ran virtual
+                  office hours, graded assignments and projects, and kept the lab and IT environments ready
+                  for sessions.
+                </div>
               </div>
             </div>
 
