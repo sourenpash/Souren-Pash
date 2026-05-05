@@ -69,6 +69,41 @@
     @media (max-width: 600px) {
       .misc-grid { grid-template-columns: 1fr; }
     }
+
+    .app-cycler {
+      position: relative;
+      width: 160px;
+      height: 160px;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #111;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    }
+    .app-cycler img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: app-cycle 18s linear infinite;
+    }
+    .app-cycler img:nth-child(1) { animation-delay: 0s; }
+    .app-cycler img:nth-child(2) { animation-delay: 2s; }
+    .app-cycler img:nth-child(3) { animation-delay: 4s; }
+    .app-cycler img:nth-child(4) { animation-delay: 6s; }
+    .app-cycler img:nth-child(5) { animation-delay: 8s; }
+    .app-cycler img:nth-child(6) { animation-delay: 10s; }
+    .app-cycler img:nth-child(7) { animation-delay: 12s; }
+    .app-cycler img:nth-child(8) { animation-delay: 14s; }
+    .app-cycler img:nth-child(9) { animation-delay: 16s; }
+    @keyframes app-cycle {
+      0%      { opacity: 0; }
+      2%      { opacity: 1; }
+      11.11%  { opacity: 1; }
+      13.11%  { opacity: 0; }
+      100%    { opacity: 0; }
+    }
   </style>
 </head>
 
@@ -364,16 +399,21 @@
                     <span class="papertitle">Sleep-Onset Prediction with Intelligent Sensor Networks</span>
                   </a>
                   <br>
-                  <strong>Souren Pashangpour</strong>
+                  <strong>Souren Pashangpour</strong>, Sohrab Roointan
                   <br>
                   <em>Course project, Intelligent Sensor Networks</em>, 2024
                   <br>
                   <a href="souren/projects/sleep_onset_prediction.pdf">slides (PDF)</a>
                   <p></p>
                   <p>
-                    A multi-sensor pipeline that fuses physiological and ambient signals to predict sleep onset
-                    in real time. Compares classical sequence models against light-weight deep nets under tight
-                    on-device compute budgets.
+                    A distributed intelligent sensor network for comfort monitoring and sleep-onset prediction.
+                    ESP32-S3 sensing hubs placed at the bedside, window, and door collect localized temperature,
+                    humidity, light, acoustic, BLE/RSSI, and indoor&ndash;outdoor gradient data, then stream
+                    calibrated and Kalman-filtered readings to a central server over TCP. The server builds a
+                    spatio-temporal semantic map using inverse-distance weighting between nodes, estimates room
+                    thermal dynamics with a first-order ODE, and uses camera-derived posture/presence labels only
+                    as supervision for training a logistic-regression model to predict sleep-related state
+                    transitions and recommend proactive climate-control actions.
                   </p>
                 </td>
               </tr>
@@ -410,25 +450,23 @@
 
               <tr>
                 <td style="padding:16px;width:20%;vertical-align:middle">
-                  <div class="placeholder-thumb">BREAD</div>
+                  <img src="souren/pictures/breadbot.jpeg" alt="Breadbot" width="160">
                 </td>
                 <td style="padding:8px;width:80%;vertical-align:middle">
                   <span class="papertitle">Breadbot: Automated Bread Cutting Machine</span>
                   <br>
-                  <strong>Souren Pashangpour</strong> et al.
+                  <strong>Souren Pashangpour</strong>, Mahyar Tajeri, Gibran Rajput
                   <br>
-                  <em>Consulting project for an Egg Club restaurant operator</em>, 2025&ndash;present
+                  <em>2025&ndash;2026</em>
                   <p></p>
                   <p>
-                    A custom bread-processing machine designed to load, lock, cut, trim, and sort bread slices
-                    for restaurant operations. Led the system concept and integration across mechanical,
-                    electrical, and software work: selected and validated BLDC and stepper motors, encoders,
-                    lead screws, couplers, rails, and linear blocks; designed Fusion 360 parts and 3D-printed
-                    prototypes for rapid iteration; and shaped a modular DFA/DFM architecture for assembly,
-                    maintenance, and future upgrades. The control stack runs in C++ with PlatformIO on a
-                    Teensy&nbsp;4.1, coordinating NEMA steppers, rotary encoders, limit switches, and dual knife
-                    mechanisms, including a rotary-encoder lever gauge that maps loaf topology for precise
-                    slice heights and sub-millimeter trimming.
+                    A custom bread-processing machine for restaurant operations. My role was mainly system design
+                    and technical blueprinting: defining the overall architecture, breaking the machine into
+                    mechanical / electrical / software subsystems, selecting key components, and guiding early
+                    design iterations so the team could move from concept to buildable hardware. I also assisted
+                    across hardware and software design, and developed an in-house sensing approach: a
+                    rotary-encoder lever gauge that mechanically maps loaf topology so cuts can be adjusted around
+                    weak points in the bread and meet slice-height / trimming requirements.
                   </p>
                 </td>
               </tr>
@@ -443,9 +481,6 @@
               <tr>
                 <td style="padding:16px;width:100%;vertical-align:middle">
                   <h2>Web &amp; Mobile Apps</h2>
-                  <p>
-                    A few apps I've designed and shipped on the side. Descriptions and screenshots coming soon.
-                  </p>
                 </td>
               </tr>
             </tbody>
@@ -484,29 +519,52 @@
                 <td style="padding:8px;width:80%;vertical-align:middle">
                   <span class="papertitle">TTC Scheduler</span>
                   <br>
-                  <strong>Souren Pashangpour</strong>, Mahyar Tajeri
+                  Mahyar Tajeri, <strong>Souren Pashangpour</strong>
                   <br>
                   <em>Web app</em>
                   <p></p>
                   <p>
-                    A transit scheduling tool for the Toronto Transit Commission, built as a personal project for
-                    Mahyar. Solid prototype but never adopted in production.
+                    A worker-scheduling prototype Souren and Mahyar built after learning through Mahyar's uncle,
+                    a TTC manager, that staff scheduling and shift coordination were operational pain points.
+                    We developed a working tool to explore a better workflow for assigning and managing worker
+                    schedules, but it was never selected through the TTC's formal bidding process.
                   </p>
                 </td>
               </tr>
 
               <tr>
                 <td style="padding:16px;width:20%;vertical-align:middle">
-                  <div class="placeholder-thumb">habits</div>
+                  <a href="https://apps.apple.com/ca/app/gohabits/id6503245014">
+                    <div class="app-cycler" aria-label="GoHabits screenshots">
+                      <img src="souren/pictures/gohabits/screenshot_01.png" alt="">
+                      <img src="souren/pictures/gohabits/screenshot_02.png" alt="">
+                      <img src="souren/pictures/gohabits/screenshot_03.png" alt="">
+                      <img src="souren/pictures/gohabits/screenshot_04.png" alt="">
+                      <img src="souren/pictures/gohabits/screenshot_05.png" alt="">
+                      <img src="souren/pictures/gohabits/screenshot_06.png" alt="">
+                      <img src="souren/pictures/gohabits/screenshot_07.png" alt="">
+                      <img src="souren/pictures/gohabits/screenshot_08.png" alt="">
+                      <img src="souren/pictures/gohabits/screenshot_09.png" alt="">
+                    </div>
+                  </a>
                 </td>
                 <td style="padding:8px;width:80%;vertical-align:middle">
-                  <span class="papertitle">GoHabits</span>
+                  <a href="https://apps.apple.com/ca/app/gohabits/id6503245014">
+                    <span class="papertitle">GoHabits</span>
+                  </a>
                   <br>
-                  <strong>Souren Pashangpour</strong>, Mahyar Tajeri
+                  Mahyar Tajeri, <strong>Souren Pashangpour</strong>
                   <br>
-                  <em>iOS app &mdash; available on the App&nbsp;Store</em>
+                  <em>iOS app &mdash; <a href="https://apps.apple.com/ca/app/gohabits/id6503245014">App&nbsp;Store</a></em>
                   <p></p>
-                  <p>Description coming soon.</p>
+                  <p>
+                    Built and shipped an iOS habit-tracking app with Mahyar Tajeri, listed on the App Store under
+                    GoHabits Inc. as a productivity app with the tagline &ldquo;Craft your dream life.&rdquo;
+                    GoHabits helps users build routines, track habits, journal progress, and stay accountable
+                    through community features like a social circle, home feed, profile pages, habit pages,
+                    comments, group chats, and upcoming &ldquo;Monk Mode&rdquo; / GoAI features. We also showcased
+                    GoHabits at Collision&nbsp;2023.
+                  </p>
                 </td>
               </tr>
 
