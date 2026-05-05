@@ -1,0 +1,42 @@
+# macOS
+.DS_Store
+
+# Office / Word temp lock files
+~$*
+
+# Editor / build leftovers
+*.swp
+*.bak
+*.log
+
+# ---- Internal / not-for-public ----
+
+# Scratch links and notes
+souren/links.txt
+souren/supplementary materials/notes.txt
+
+# Personal / application documents (not linked from the site)
+souren/supplementary materials/SourenResume.docx
+souren/supplementary materials/ResearchContributions_SourenPashangpour.docx
+souren/supplementary materials/Plan of Study Souren Pashangpour.docx
+
+# Course materials authored as instructor — do not publish
+souren/supplementary materials/MIE 443 Contest 1 Instructions 2026.docx
+souren/supplementary materials/MIE 443 Contest 2 Instructions 2026.docx
+souren/supplementary materials/MIE 443 Contest 3 Instructions 2026  v2.docx
+
+# Manuscript drafts (use the published versions instead)
+souren/papers/IEEE Manu Rev v9_condensedreferences.docx
+
+# Source PowerPoint — the converted PDF is what the site links to
+souren/projects/Inteligent Sensor Networks, sleep onset prediction.pptx
+
+# AER1217 Crazyflie report + handout — pulled from the site, not for public hosting
+souren/projects/AER1217 Final Project Report (2).pdf
+souren/projects/2025_AER1217_Project.pdf
+
+# Large video assets — keep out of the repo (use YouTube / external host instead)
+*.mp4
+*.mov
+*.avi
+*.mkv

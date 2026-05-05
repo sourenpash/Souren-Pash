@@ -1,0 +1,620 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Souren Pashangpour</title>
+
+  <meta name="author" content="Souren Pashangpour">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+  <style>
+    .placeholder-thumb {
+      width: 160px;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: repeating-linear-gradient(45deg, #e8e8e8, #e8e8e8 8px, #f4f4f4 8px, #f4f4f4 16px);
+      border: 1px solid #d0d0d0;
+      border-radius: 4px;
+      color: #666;
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .misc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 6px 16px 16px 16px;
+    }
+    .misc-card {
+      border: 1px solid #e6e6e6;
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: #fafafa;
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .misc-card.full { grid-column: 1 / -1; }
+    .misc-pill {
+      display: inline-block;
+      padding: 3px 12px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: #2a2a2a;
+      margin-bottom: 10px;
+    }
+    .misc-card .entry { margin-top: 10px; }
+    .misc-card .entry:first-of-type { margin-top: 0; }
+    .misc-card .role-line { font-weight: 700; }
+    .misc-card .role-line .meta { font-weight: 400; font-style: italic; color: #777; margin-left: 6px; }
+    .misc-card .role-detail { color: #444; }
+    .misc-news-img {
+      width: 100%;
+      max-width: 460px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      display: block;
+    }
+    @media (max-width: 600px) {
+      .misc-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <table
+    style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+
+          <!-- ============== HEADER ============== -->
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr style="padding:0px">
+                <td style="padding:2.5%;width:63%;vertical-align:middle">
+                  <p class="name" style="text-align: center;">
+                    Souren Pashangpour
+                  </p>
+                  <p>
+                    I'm a PhD candidate at <a href="https://asblab.mie.utoronto.ca/">ASBLab</a>,
+                    University of Toronto, advised by
+                    <a href="https://www.mie.utoronto.ca/faculty_staff/nejat/">Prof. Goldie Nejat</a>,
+                    and a recipient of the
+                    <a href="https://robotics.utoronto.ca/healthcare-robotics-hero-nserc-create-graduate-training/">NSERC CREATE Healthcare Robotics (HeRo)</a>
+                    scholarship. My research focuses on human-centered control of humanoid helpers for social and
+                    physical human&ndash;robot interaction in service and healthcare settings. I'm interested in
+                    how robots can use foundation models, multimodal reasoning, embodiment-aware interaction, and
+                    long-horizon planning to behave safely, expressively, and usefully around people.
+                  </p>
+                  <p>
+                    Outside the lab, I enjoy weightlifting, archery, Brazilian jiu-jitsu, and being outdoors.
+                    I also take pride in taking care of my 1989 IROC-Z28 Camaro, which has become its own
+                    long-running mechanical project.
+                  </p>
+                  <p style="text-align:center">
+                    <a href="mailto:sourenpashangpour@gmail.com">Email</a> &nbsp;/&nbsp;
+                    <a href="https://scholar.google.com/citations?user=SourenPashangpour">Scholar</a> &nbsp;/&nbsp;
+                    <a href="https://github.com/sourenpash">Github</a>
+                  </p>
+                </td>
+                <td style="padding:2.5%;width:37%;max-width:37%">
+                  <a href="souren/pictures/me.jpeg"><img
+                      style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo"
+                      src="souren/pictures/me.jpeg" class="hoverZoomLink"></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- ============== PUBLICATIONS ============== -->
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:16px;width:100%;vertical-align:middle">
+                  <h2>Publications</h2>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <img src="souren/pictures/ExpressMM_paper_arch.svg" alt="ExpressMM" width="160">
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="https://arxiv.org/abs/2604.05320">
+                    <span class="papertitle">ExpressMM: Expressive Mobile Manipulation Behaviors in Human&ndash;Robot Interactions</span>
+                  </a>
+                  <br>
+                  <strong>Souren Pashangpour</strong>,
+                  <a href="https://wang-haitong.github.io">Haitong Wang</a>,
+                  <a href="https://mattlisondra.com">Matthew Lisondra</a>,
+                  <a href="https://www.mie.utoronto.ca/faculty_staff/nejat/">Goldie Nejat</a>
+                  <br>
+                  <em>IEEE RO-MAN</em>, 2026 &nbsp;(Submitted)
+                  <br>
+                  <a href="https://arxiv.org/abs/2604.05320">arXiv</a>
+                  <p></p>
+                  <p>
+                    A multi-foundation-model framework for expressive, interruptible mobile manipulation in
+                    human&ndash;robot interaction. ExpressMM combines a multimodal perception module, a VLM-based
+                    interaction planner, and a VLA-based controller so a TurtleBot4 with a SO-101 arm can
+                    interpret speech and visual context, generate expressive action sequences, execute coordinated
+                    base&ndash;arm motions, and replan when users interrupt or redirect the task. In a live
+                    collaborative-assembly demonstration study, participants found the robot's behaviors clear
+                    and socially expressive, while also showing the expected caution around trust and safety for
+                    physical object-handling interactions.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <img src="souren/pictures/povnet+.png" alt="POVNet+" width="160">
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="https://arxiv.org/abs/2602.00131">
+                    <span class="papertitle">POVNet+: A Deep Learning Architecture for Socially Assistive Robots to Learn and Assist with Multiple Activities of Daily Living</span>
+                  </a>
+                  <br>
+                  Fraser Robinson,
+                  <strong>Souren Pashangpour</strong>,
+                  <a href="https://mattlisondra.com">Matthew Lisondra</a>,
+                  <a href="https://www.mie.utoronto.ca/faculty_staff/nejat/">Goldie Nejat</a>
+                  <br>
+                  <em>Advanced Robotics (under review)</em>, 2026
+                  <br>
+                  <a href="https://arxiv.org/abs/2602.00131">arXiv</a>
+                  <p></p>
+                  <p>
+                    A multimodal deep-learning architecture for socially assistive robots to recognize and
+                    monitor activities of daily living in real time. POVNet+ fuses RGB video, 3D skeletal pose,
+                    and object-location features using a spatial mid-fusion method, then uses ADL and motion
+                    embedding spaces to distinguish between seen ADLs, unseen ADLs, atypically performed ADLs,
+                    and non-ADL movements. In experiments, it outperformed several unimodal and multimodal HAR
+                    baselines on within-domain and out-of-domain ADL recognition, and was integrated on the
+                    socially assistive robot Leia to proactively initiate assistance in a cluttered home-like
+                    environment.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <img src="souren/pictures/litarture%20review%201.svg" alt="Healthcare LLM review" width="160">
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="https://www.mdpi.com/2218-6581/13/8/112">
+                    <span class="papertitle">The Future of Intelligent Healthcare: A Systematic Analysis and Discussion on the Integration and Impact of Robots Using Large Language Models for Healthcare</span>
+                  </a>
+                  <br>
+                  <strong>Souren Pashangpour</strong>,
+                  <a href="https://www.mie.utoronto.ca/faculty_staff/nejat/">Goldie Nejat</a>
+                  <br>
+                  <em>Robotics (MDPI)</em>, vol. 13, no. 8, 2024
+                  <br>
+                  <a href="https://www.mdpi.com/2218-6581/13/8/112">paper</a>
+                  /
+                  <a href="https://doi.org/10.3390/robotics13080112">DOI</a>
+                  <p></p>
+                  <p>
+                    A systematic review of how large language models can be integrated into healthcare robots to
+                    help address aging populations and clinician shortages. Surveys current LLM-enabled
+                    capabilities, identifies open challenges in safety, grounding, and deployment, and lays out
+                    a research agenda for trustworthy clinical use.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <img src="souren/pictures/lecturegpt.svg" alt="LectureGPT" width="160">
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <span class="papertitle">LectureGPT: An LLM-Based Multimodal Lecturing Pipeline for Socially Assistive Humanoid Robots</span>
+                  <br>
+                  <strong>Souren Pashangpour</strong>,
+                  <a href="https://www.mie.utoronto.ca/faculty_staff/nejat/">Goldie Nejat</a>
+                  <br>
+                  <em>IEEE Transactions on Learning Technologies</em>, 2026 &nbsp;(Under Review)
+                  <p></p>
+                  <p>
+                    An LLM-based architecture that enables a NAO social robot to autonomously generate and
+                    deliver a university lecture from instructor-provided notes. LectureGPT segments lecture
+                    slides, uses GPT-4 with EmoPrompt to generate natural-language explanations, then applies
+                    chain-of-thought prompting to insert synchronized robot action commands into the script so
+                    speech, gestures, body movements, slide transitions, and video playback are coordinated
+                    through the robot's low-level controller. In a 40-minute classroom HRI study with fourth-year
+                    engineering students, the system reduced lecture-preparation time compared with manual robot
+                    programming and was generally perceived as informative, engaging, and expressive, while also
+                    revealing limits around adaptation, clarification, and measurable learning gains.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <img src="souren/pictures/Design%20and%20Development%20of%20a%20Novel%20Haptic%20Device.png" alt="Haptic Device" width="160">
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="souren/papers/Design_and_Development_of_a_Novel_Haptic_Device_for_Plucked_Musical_Instrument_AR_Simulation.pdf">
+                    <span class="papertitle">Design and Development of a Novel Haptic Device for Plucked Musical Instrument AR Simulation</span>
+                  </a>
+                  <br>
+                  Pooyan Nayyeri,
+                  Everly Conrad-Baldwin,
+                  Kourosh Zareinia,
+                  <strong>Souren Pashangpour</strong> (acknowledgements)
+                  <br>
+                  <em>IEEE</em>, 2023
+                  <br>
+                  <a href="souren/papers/Design_and_Development_of_a_Novel_Haptic_Device_for_Plucked_Musical_Instrument_AR_Simulation.pdf">paper (PDF)</a>
+                  /
+                  <a href="https://ieeexplore.ieee.org/document/10288804">IEEE Xplore</a>
+                  <p></p>
+                  <p>
+                    A wearable haptic device for AR simulation of plucked musical instruments, using a pair of
+                    parallel five-bar mechanisms to move a physical string piece against the user's fingertip
+                    and emulate plucking interactions. During my third year of undergrad, I was acknowledged for
+                    developing the Python Leap Motion controller code, which handled hand/finger pose tracking,
+                    finger extension/contraction detection, virtual-string zone detection, and the high-level
+                    state machine that sent serial commands to the Arduino controller to switch the mechanism
+                    between rest, engaged, and pluck configurations.
+                  </p>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <!-- ============== PROJECTS ============== -->
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:16px;width:100%;vertical-align:middle">
+                  <h2>Projects</h2>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <img src="souren/pictures/gasdrone.jpeg" alt="Gas-powered VTOL" width="160">
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="souren/projects/Conference%20Paper%20for%20gas%20drone.docx.pdf">
+                    <span class="papertitle">Exploration into the Use of Gas Power for Lifting Operations</span>
+                  </a>
+                  <br>
+                  <strong>Souren Pashangpour</strong>,
+                  Karim Akl,
+                  Michael Hyunh,
+                  Gibran Ahmed Rajput
+                  <br>
+                  <em>Toronto Metropolitan University &mdash; Supervisor: Shudong Yu</em>, 2023
+                  <br>
+                  <a href="souren/projects/Conference%20Paper%20for%20gas%20drone.docx.pdf">conference paper (PDF)</a>
+                  /
+                  <a href="souren/projects/GAS.pdf">project report (PDF)</a>
+                  <p></p>
+                  <p>
+                    A scaled-model gas-powered VTOL device designed to lift personnel for high-altitude operations,
+                    including mountainous terrain, high-rise rescue, and disaster response, where ICE energy
+                    density can outperform batteries. Completed in four months under the supervision of
+                    Dr.&nbsp;Shudong&nbsp;Yu, the system used a two-stroke nitro engine to drive four propellers
+                    through a custom bevel-gear powertrain on a 3D-printed chassis reinforced with steel rods,
+                    with major subsystems sized using von&nbsp;Mises and Goodman criteria. Bench tests on thrust,
+                    fuel consumption, vibration, thermal behavior, and structural FEA characterized the design
+                    envelope and identified the OEM clutch and powertrain losses as the primary performance
+                    bottlenecks.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <img src="souren/pictures/drone%20racing%20scene.jpg" alt="Crazyflie drone racing" width="160">
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <span class="papertitle">Autonomous Drone Racing with the Crazyflie (AER1217)</span>
+                  <br>
+                  <strong>Souren Pashangpour</strong> et al.
+                  <br>
+                  <em>AER1217 &mdash; Development of Autonomous UAS, UTIAS</em>, 2025
+                  <p></p>
+                  <p>
+                    Full perception, planning, and control stack for an autonomous Crazyflie navigating a
+                    gate-based racing course. Combines on-board state estimation with a trajectory planner
+                    that respects the quadrotor's actuation limits, achieving consistent gate fly-throughs
+                    in flight tests.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <img src="souren/pictures/sleep%20onset%20prediction%20inteligent%20sensor%20networks.png" alt="Sleep onset" width="160">
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="souren/projects/sleep_onset_prediction.pdf">
+                    <span class="papertitle">Sleep-Onset Prediction with Intelligent Sensor Networks</span>
+                  </a>
+                  <br>
+                  <strong>Souren Pashangpour</strong>
+                  <br>
+                  <em>Course project, Intelligent Sensor Networks</em>, 2024
+                  <br>
+                  <a href="souren/projects/sleep_onset_prediction.pdf">slides (PDF)</a>
+                  <p></p>
+                  <p>
+                    A multi-sensor pipeline that fuses physiological and ambient signals to predict sleep onset
+                    in real time. Compares classical sequence models against light-weight deep nets under tight
+                    on-device compute budgets.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <img src="souren/projects/RL%20project.gif" alt="RL Project" width="160">
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="https://github.com/ghssx19/RL-Project-Gym">
+                    <span class="papertitle">Autonomous RL Racing with Strategic Decision Making</span>
+                  </a>
+                  <br>
+                  <strong>Souren Pashangpour</strong>,
+                  Gibran A. Rajput,
+                  Zicheng Wang
+                  <br>
+                  <em>Course project</em>, 2023
+                  <br>
+                  <a href="https://github.com/ghssx19/RL-Project-Gym">code</a>
+                  /
+                  <a href="souren/projects/SP-GR-ZW-Autonomous%20RL%20Racing%20With%20Strategic%20Decision%20Making-1.pdf">report (PDF)</a>
+                  <p></p>
+                  <p>
+                    A hierarchical reinforcement-learning racing framework that combines high-level
+                    macro-action planning with low-level vehicle control. A PPO-based strategic layer decides
+                    when to continue driving or take pit stops under fuel and tire-wear constraints, while a
+                    pre-trained PPO-LSTM visual controller handles steering, throttle, and braking. Trained in
+                    simulated racetracks over roughly 28 hours, the system reduced unnecessary pit stops and
+                    achieved faster lap times than a human baseline in controlled trials.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <div class="placeholder-thumb">BREAD</div>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <span class="papertitle">Breadbot: Automated Bread Cutting Machine</span>
+                  <br>
+                  <strong>Souren Pashangpour</strong> et al.
+                  <br>
+                  <em>Consulting project for an Egg Club restaurant operator</em>, 2025&ndash;present
+                  <p></p>
+                  <p>
+                    A custom bread-processing machine designed to load, lock, cut, trim, and sort bread slices
+                    for restaurant operations. Led the system concept and integration across mechanical,
+                    electrical, and software work: selected and validated BLDC and stepper motors, encoders,
+                    lead screws, couplers, rails, and linear blocks; designed Fusion 360 parts and 3D-printed
+                    prototypes for rapid iteration; and shaped a modular DFA/DFM architecture for assembly,
+                    maintenance, and future upgrades. The control stack runs in C++ with PlatformIO on a
+                    Teensy&nbsp;4.1, coordinating NEMA steppers, rotary encoders, limit switches, and dual knife
+                    mechanisms, including a rotary-encoder lever gauge that maps loaf topology for precise
+                    slice heights and sub-millimeter trimming.
+                  </p>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <!-- ============== WEB APPS ============== -->
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:16px;width:100%;vertical-align:middle">
+                  <h2>Web &amp; Mobile Apps</h2>
+                  <p>
+                    A few apps I've designed and shipped on the side. Descriptions and screenshots coming soon.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <div class="placeholder-thumb">DIRT</div>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <span class="papertitle">Dirt Deposit Manager</span>
+                  <br>
+                  <strong>Souren Pashangpour</strong>, Mahyar Tajeri
+                  <br>
+                  <em>Web app &mdash; built for <a href="https://fredspaving.com">Fred's Paving</a></em>
+                  <p></p>
+                  <p>
+                    Excavation and road-work crews have to dump their dirt somewhere &mdash; usually farmland
+                    &mdash; but every load needs to be analyzed first, and every truck carries a paper ticket
+                    that has to be reconciled by hand. We built a digital system to replace the paper trail:
+                    each truck's deposit is tracked, every analysis is attached to a load, and the whole chain
+                    is searchable and auditable. Designed for and deployed with
+                    <a href="https://fredspaving.com">Fred's Paving</a>.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <div class="placeholder-thumb">TTC</div>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <span class="papertitle">TTC Scheduler</span>
+                  <br>
+                  <strong>Souren Pashangpour</strong>, Mahyar Tajeri
+                  <br>
+                  <em>Web app</em>
+                  <p></p>
+                  <p>
+                    A transit scheduling tool for the Toronto Transit Commission, built as a personal project for
+                    Mahyar. Solid prototype but never adopted in production.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <div class="placeholder-thumb">habits</div>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <span class="papertitle">GoHabits</span>
+                  <br>
+                  <strong>Souren Pashangpour</strong>, Mahyar Tajeri
+                  <br>
+                  <em>iOS app &mdash; available on the App&nbsp;Store</em>
+                  <p></p>
+                  <p>Description coming soon.</p>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <!-- ============== MISCELLANEA ============== -->
+          <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;">
+            <tbody>
+              <tr>
+                <td>
+                  <h2>Miscellanea</h2>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="misc-grid">
+
+            <div class="misc-card">
+              <span class="misc-pill" style="background:#b8d8d8;">Awards</span>
+              <div class="entry">
+                <a href="https://robotics.utoronto.ca/healthcare-robotics-hero-nserc-create-graduate-training/">NSERC CREATE Healthcare Robotics (HeRo) Scholarship</a>
+                <div class="role-detail">First robotics-focused graduate training program covering the continuum of care from hospital to home; jointly run at U&nbsp;of&nbsp;T and UBC.</div>
+              </div>
+            </div>
+
+            <div class="misc-card">
+              <span class="misc-pill" style="background:#aaba9e;">Talks</span>
+              <div class="entry">
+                <a href="https://robotics.utoronto.ca/toronto-robotics-conference-2024/#lab-talks">Toronto Robotics Conference, ASBLab Lab Talk</a>
+                <span class="meta" style="font-style:italic;color:#777;margin-left:4px;">2024</span>
+              </div>
+            </div>
+
+            <div class="misc-card full">
+              <span class="misc-pill" style="background:#fcb97d;">News</span>
+              <a href="https://www.utias.utoronto.ca/news/robotics-life-sciences-research-on-display-for-minister-nolan-quinn/"><img
+                  class="misc-news-img"
+                  src="souren/pictures/news%20coverage%20with%20minister%20nolan%20quinn.png"
+                  alt="ASBLab demo for Minister Nolan Quinn"></a>
+              <div class="entry">
+                <a href="https://www.utias.utoronto.ca/news/robotics-life-sciences-research-on-display-for-minister-nolan-quinn/">Robotics and life-sciences research on display for Minister Nolan Quinn</a>
+                <div class="role-detail">UTIAS coverage of our ASBLab demo to Ontario's Minister of Colleges and Universities.</div>
+              </div>
+              <div class="entry">
+                <a href="https://robotics.utoronto.ca/toronto-robotics-conference-2024/#lab-talks">Toronto Robotics Conference 2024 &mdash; ASBLab lab talk</a>
+                &nbsp;(<a href="https://photos.google.com/share/AF1QipOuy-_4v3HShBKJHSW391en4mGbMA-BZDJ0rTu_BNIz6VccdPvtFaiEUkkAbfGfPQ/photo/AF1QipNV35kcC6z076qZoc6iafwwtXxSMMGkh0OHcdMC?key=OHlENno2cnZoeTVkT2d6WUdCekcyVEdlWmticGpn">photos</a>)
+              </div>
+            </div>
+
+            <div class="misc-card">
+              <span class="misc-pill" style="background:#edd892;">Teaching</span>
+              <div class="entry">
+                <div class="role-line">
+                  <a href="https://engineering.calendar.utoronto.ca/course/mie443h1">MIE443 &mdash; Mechatronics Systems</a>
+                  <span class="meta">Head TA</span>
+                </div>
+                <div class="role-detail">
+                  Teach C++ and ROS&nbsp;2 fundamentals to 4th-year engineers; design contests; manage 6 TAs.
+                  Hired to lead the migration from TurtleBot&nbsp;2 / ROS&nbsp;1 to TurtleBot&nbsp;4 / ROS&nbsp;2 with new starter code.
+                </div>
+              </div>
+              <div class="entry">
+                <div class="role-line">
+                  <a href="https://www.mie.utoronto.ca/wp-content/uploads/2021/03/MIE_1070S_Course_Syllabus.pdf">MIE&nbsp;1070 &mdash; Intelligent Healthcare Robots</a>
+                  <span class="meta">TA</span>
+                </div>
+                <div class="role-detail">Graduate course on robots for clinical and home-care settings.</div>
+              </div>
+            </div>
+
+            <div class="misc-card">
+              <span class="misc-pill" style="background:#c6b89e;">Experience</span>
+              <div class="entry">
+                <div class="role-line">Jr Python / C++ Developer, NAVMOBILITY <span class="meta">2023</span></div>
+                <div class="role-detail">Built <em>3DLiSim</em>, a desktop geomatics app (C++/.NET, Qt); integrated OpenMMS / OpenCV to segment 3D point clouds for LiDAR GCP calibration.</div>
+              </div>
+              <div class="entry">
+                <div class="role-line">Engineering Intern, Honda Canada <span class="meta">2022</span></div>
+                <div class="role-detail">SolidWorks 3D-printable assembly jigs for the Civic line; QC and engine assembly.</div>
+              </div>
+              <div class="entry">
+                <div class="role-line">Engineering Intern, IDES / Scentroid <span class="meta">2017&ndash;2021</span></div>
+                <div class="role-detail">FANUC robot programming, plasma-cutter end-effector design, sensor &amp; air-quality data analysis.</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ============== FOOTER ============== -->
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:0px">
+                  <br>
+                  <p style="text-align:right;font-size:small;">
+                    Template adapted from <a href="https://jonbarron.info/">Jon Barron</a>'s
+                    <a href="https://github.com/jonbarron/jonbarron_website">website</a>.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+  </table>
+</body>
+
+</html>
