@@ -214,6 +214,70 @@
       flex-shrink: 0;
       border: 1px solid #e0e0e0;
     }
+
+    .video-embed {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 16 / 9;
+      margin-top: 10px;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #000;
+    }
+    .video-embed iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .lab-nav {
+      display: flex;
+      gap: 14px;
+      font-size: 12px;
+      margin: 4px 0 6px 0;
+      color: #888;
+    }
+    .lab-nav a {
+      color: #1772d0;
+      text-decoration: none;
+    }
+    .lab-nav a:hover { color: #f09228; }
+    .lab-nav .sep { color: #ccc; }
+    .lab-carousel {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      padding-bottom: 2px;
+      transition: height 0.25s ease;
+    }
+    .lab-carousel::-webkit-scrollbar { height: 6px; }
+    .lab-carousel::-webkit-scrollbar-thumb { background: #c8c8c8; border-radius: 3px; }
+    .lab-carousel::-webkit-scrollbar-track { background: transparent; }
+    .lab-slide {
+      flex: 0 0 100%;
+      min-width: 0;
+      scroll-snap-align: start;
+      box-sizing: border-box;
+    }
+    .lab-slide p { margin: 0; }
+    .lab-slide-video {
+      display: flex;
+      align-items: flex-start;
+    }
+    .lab-slide-video .video-embed {
+      width: 100%;
+      max-width: 320px;
+      margin: 0;
+    }
   </style>
 </head>
 
@@ -281,10 +345,10 @@
             <tbody>
 
               <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle">
+                <td style="padding:16px;width:20%;vertical-align:top">
                   <img class="proj-thumb" src="souren/pictures/ExpressMM_paper_arch.svg" alt="ExpressMM">
                 </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
+                <td style="padding:8px;width:80%;vertical-align:top">
                   <a href="https://arxiv.org/abs/2604.05320">
                     <span class="papertitle">ExpressMM: Expressive Mobile Manipulation Behaviors in Human&ndash;Robot Interactions</span>
                   </a>
@@ -312,10 +376,10 @@
               </tr>
 
               <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle">
+                <td style="padding:16px;width:20%;vertical-align:top">
                   <img class="proj-thumb" src="souren/pictures/povnet+.png" alt="POVNet+">
                 </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
+                <td style="padding:8px;width:80%;vertical-align:top">
                   <a href="https://arxiv.org/abs/2602.00131">
                     <span class="papertitle">POVNet+: A Deep Learning Architecture for Socially Assistive Robots to Learn and Assist with Multiple Activities of Daily Living</span>
                   </a>
@@ -343,10 +407,10 @@
               </tr>
 
               <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle">
+                <td style="padding:16px;width:20%;vertical-align:top">
                   <img class="proj-thumb" src="souren/pictures/litarture%20review%201.svg" alt="Healthcare LLM review">
                 </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
+                <td style="padding:8px;width:80%;vertical-align:top">
                   <a href="https://www.mdpi.com/2218-6581/13/8/112">
                     <span class="papertitle">The Future of Intelligent Healthcare: A Systematic Analysis and Discussion on the Integration and Impact of Robots Using Large Language Models for Healthcare</span>
                   </a>
@@ -370,10 +434,10 @@
               </tr>
 
               <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle">
+                <td style="padding:16px;width:20%;vertical-align:top">
                   <img class="proj-thumb" src="souren/pictures/lecturegpt.svg" alt="LectureGPT">
                 </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
+                <td style="padding:8px;width:80%;vertical-align:top">
                   <span class="papertitle">LectureGPT: An LLM-Based Multimodal Lecturing Pipeline for Socially Assistive Humanoid Robots</span>
                   <br>
                   <strong>Souren Pashangpour</strong>,
@@ -396,10 +460,10 @@
               </tr>
 
               <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle">
+                <td style="padding:16px;width:20%;vertical-align:top">
                   <img class="proj-thumb" src="souren/pictures/Design%20and%20Development%20of%20a%20Novel%20Haptic%20Device.png" alt="Haptic Device">
                 </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
+                <td style="padding:8px;width:80%;vertical-align:top">
                   <a href="souren/papers/Design_and_Development_of_a_Novel_Haptic_Device_for_Plucked_Musical_Instrument_AR_Simulation.pdf">
                     <span class="papertitle">Design and Development of a Novel Haptic Device for Plucked Musical Instrument AR Simulation</span>
                   </a>
@@ -446,8 +510,51 @@
             style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
 
+              <tr id="localeyes">
+                <td style="padding:16px;width:20%;vertical-align:top">
+                  <a href="https://youtu.be/CTPjWSD2xwU"><img class="proj-thumb" src="souren/pictures/localeye%20thumbnail.png" alt="LocalEyes"></a>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:top">
+                  <span class="papertitle">LocalEyes &mdash; Low-Cost Distributed 3D Tracking System</span>
+                  <br>
+                  <strong>Souren Pashangpour</strong>,
+                  Mahyar Tajeri,
+                  <a href="https://ghssx19.github.io/Gibran-Rajput/">Gibran Rajput</a>
+                  <br>
+                  <em>2025</em>
+                  <br>
+                  <a href="https://youtu.be/CTPjWSD2xwU">video</a>
+                  <p></p>
+                  <div class="lab-nav">
+                    <a href="#localeyes-text">Description</a>
+                    <span class="sep">&middot;</span>
+                    <a href="#localeyes-video">Video</a>
+                    <span class="sep">&middot;</span>
+                    <span>scroll&nbsp;&rarr;</span>
+                  </div>
+                  <div class="lab-carousel" data-autoheight>
+                    <div class="lab-slide" id="localeyes-text">
+                      <p>
+                        LocalEyes is a distributed sensing system for low-cost 3D tracking using overlapping
+                        commodity cameras and sensors. We co-developed the core algorithm and validation pipeline
+                        across simulation, Vicon ground truth, C++ / Rust implementation, CUDA acceleration, and
+                        hardware&ndash;software integration.
+                      </p>
+                    </div>
+                    <div class="lab-slide lab-slide-video" id="localeyes-video">
+                      <div class="video-embed">
+                        <iframe src="https://www.youtube-nocookie.com/embed/CTPjWSD2xwU" loading="lazy"
+                          allowfullscreen
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          title="LocalEyes demo"></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
               <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle">
+                <td style="padding:16px;width:20%;vertical-align:top">
                   <div class="breadbot-cycler" aria-label="Breadbot media preview">
                     <video autoplay muted loop playsinline preload="metadata" poster="souren/pictures/breadbot1.png">
                       <source src="souren/pictures/breadbot-cutting.mp4" type="video/mp4">
@@ -456,7 +563,7 @@
                     <img src="souren/pictures/breadbot1.png" alt="Breadbot prototype cutting bread">
                   </div>
                 </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
+                <td style="padding:8px;width:80%;vertical-align:top">
                   <span class="papertitle">Breadbot: Automated Bread Cutting Machine</span>
                   <br>
                   <strong>Souren Pashangpour</strong>, Mahyar Tajeri, Gibran Rajput
@@ -476,10 +583,10 @@
               </tr>
 
               <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle">
+                <td style="padding:16px;width:20%;vertical-align:top">
                   <img class="proj-thumb" src="souren/pictures/drone%20racing%20scene.jpg" alt="Crazyflie drone racing">
                 </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
+                <td style="padding:8px;width:80%;vertical-align:top">
                   <span class="papertitle">Autonomous Drone Racing with the Crazyflie (AER1217)</span>
                   <br>
                   <strong>Souren Pashangpour</strong> et al.
@@ -496,10 +603,10 @@
               </tr>
 
               <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle">
+                <td style="padding:16px;width:20%;vertical-align:top">
                   <img class="proj-thumb" src="souren/pictures/sleep%20onset%20prediction%20inteligent%20sensor%20networks.png" alt="Sleep onset">
                 </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
+                <td style="padding:8px;width:80%;vertical-align:top">
                   <a href="souren/projects/sleep_onset_prediction.pdf">
                     <span class="papertitle">Sleep-Onset Prediction with Intelligent Sensor Networks</span>
                   </a>
@@ -524,10 +631,10 @@
               </tr>
 
               <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle">
+                <td style="padding:16px;width:20%;vertical-align:top">
                   <img class="proj-thumb" src="souren/projects/RL%20project.gif" alt="RL Project">
                 </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
+                <td style="padding:8px;width:80%;vertical-align:top">
                   <a href="https://github.com/ghssx19/RL-Project-Gym">
                     <span class="papertitle">Autonomous RL Racing with Strategic Decision Making</span>
                   </a>
@@ -554,10 +661,10 @@
               </tr>
 
               <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle">
+                <td style="padding:16px;width:20%;vertical-align:top">
                   <img class="proj-thumb" src="souren/pictures/gasdrone.jpeg" alt="Gas-powered VTOL">
                 </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
+                <td style="padding:8px;width:80%;vertical-align:top">
                   <a href="souren/projects/Conference%20Paper%20for%20gas%20drone.docx.pdf">
                     <span class="papertitle">Exploration into the Use of Gas Power for Lifting Operations</span>
                   </a>
@@ -674,12 +781,12 @@
             <tbody>
 
               <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle">
+                <td style="padding:16px;width:20%;vertical-align:top">
                   <a href="https://rougeapps.ca/demo/dirtdeposit/">
                     <img class="proj-thumb" src="souren/pictures/dirt-deposit-portal.png" alt="Dirt Deposit Manager portal">
                   </a>
                 </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
+                <td style="padding:8px;width:80%;vertical-align:top">
                   <a href="https://rougeapps.ca/demo/dirtdeposit/">
                     <span class="papertitle">Dirt Deposit Manager</span>
                   </a>
@@ -702,12 +809,12 @@
               </tr>
 
               <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle">
+                <td style="padding:16px;width:20%;vertical-align:top">
                   <a href="https://rougeapps.ca/demo/abo/login.php">
                     <img class="proj-thumb" src="souren/pictures/abo-platform.png" alt="ABO Autism care-session platform">
                   </a>
                 </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
+                <td style="padding:8px;width:80%;vertical-align:top">
                   <a href="https://rougeapps.ca/demo/abo/login.php">
                     <span class="papertitle">ABO Autism Care-Session Platform</span>
                   </a>
@@ -730,7 +837,7 @@
               </tr>
 
               <tr>
-                <td style="padding:16px;width:20%;vertical-align:middle">
+                <td style="padding:16px;width:20%;vertical-align:top">
                   <a href="https://apps.apple.com/ca/app/gohabits/id6503245014">
                     <div class="app-cycler" aria-label="GoHabits screenshots">
                       <img src="souren/pictures/gohabits/screenshot_01.png" alt="">
@@ -745,7 +852,7 @@
                     </div>
                   </a>
                 </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
+                <td style="padding:8px;width:80%;vertical-align:top">
                   <a href="https://apps.apple.com/ca/app/gohabits/id6503245014">
                     <span class="papertitle">GoHabits</span>
                   </a>
@@ -887,6 +994,37 @@
         </td>
       </tr>
   </table>
+<script>
+  // Make .lab-carousel auto-size to its currently-visible slide, so the row
+  // shrinks/expands as you scroll between description and video.
+  (function () {
+    var carousels = document.querySelectorAll('.lab-carousel[data-autoheight]');
+    if (!carousels.length) return;
+    carousels.forEach(function (c) {
+      var slides = c.querySelectorAll('.lab-slide');
+      if (!slides.length) return;
+      var raf = 0;
+      function setHeight() {
+        var idx = Math.round(c.scrollLeft / c.offsetWidth);
+        var slide = slides[idx] || slides[0];
+        c.style.height = slide.scrollHeight + 'px';
+      }
+      function schedule() {
+        if (raf) return;
+        raf = requestAnimationFrame(function () { raf = 0; setHeight(); });
+      }
+      c.addEventListener('scroll', schedule, { passive: true });
+      window.addEventListener('resize', schedule);
+      // Iframes can change their own size after load
+      c.querySelectorAll('iframe').forEach(function (f) {
+        f.addEventListener('load', schedule);
+      });
+      // Initial pass after layout
+      requestAnimationFrame(setHeight);
+      setTimeout(setHeight, 250);
+    });
+  })();
+</script>
 </body>
 
 </html>
