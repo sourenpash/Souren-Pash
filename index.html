@@ -117,48 +117,88 @@
       .misc-grid { grid-template-columns: 1fr; }
     }
 
-    .app-cycler {
-      position: relative;
-      width: 160px;
-      height: 160px;
+    .rouge-apps {
+      margin: 0 16px 18px 16px;
+      padding: 16px;
+      background: #fbfaf7;
+      border: 1px solid #e3ded2;
+      border-radius: 8px;
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    }
+    .rouge-intro {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+    .rouge-intro img {
+      width: 96px;
+      height: 96px;
+      display: block;
       border-radius: 6px;
-      overflow: hidden;
-      background: #111;
-      border: 1px solid #ececec;
+      border: 1px solid #e0e0e0;
+      background: #050505;
     }
-    .app-cycler img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      opacity: 0;
-      animation: app-cycle 18s linear infinite;
+    .rouge-intro p {
+      margin: 8px 0 0 0;
+      color: #333;
+      line-height: 1.45;
     }
-    .app-cycler img:nth-child(1) { animation-delay: 0s; }
-    .app-cycler img:nth-child(2) { animation-delay: 2s; }
-    .app-cycler img:nth-child(3) { animation-delay: 4s; }
-    .app-cycler img:nth-child(4) { animation-delay: 6s; }
-    .app-cycler img:nth-child(5) { animation-delay: 8s; }
-    .app-cycler img:nth-child(6) { animation-delay: 10s; }
-    .app-cycler img:nth-child(7) { animation-delay: 12s; }
-    .app-cycler img:nth-child(8) { animation-delay: 14s; }
-    .app-cycler img:nth-child(9) { animation-delay: 16s; }
-    @keyframes app-cycle {
-      0%      { opacity: 0; }
-      2%      { opacity: 1; }
-      11.11%  { opacity: 1; }
-      13.11%  { opacity: 0; }
-      100%    { opacity: 0; }
+    .rouge-links {
+      margin-top: 8px;
+      font-size: 14px;
+    }
+    .rouge-demo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .rouge-demo-card {
+      display: flex;
+      min-height: 122px;
+      flex-direction: column;
+      padding: 12px;
+      border: 1px solid #e3ded2;
+      border-radius: 8px;
+      background: #fff;
+      color: #333;
+      transition: border-color 0.15s ease, background-color 0.15s ease;
+    }
+    .rouge-demo-card:hover {
+      border-color: #b9aa8d;
+      background: #fffdf8;
+      color: #333;
+    }
+    .rouge-demo-card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #111;
+    }
+    .rouge-demo-card span {
+      display: block;
+      color: #444;
+      line-height: 1.35;
+    }
+    .rouge-demo-card em {
+      margin-top: auto;
+      padding-top: 12px;
+      color: #777;
+      font-style: normal;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    @media (max-width: 700px) {
+      .rouge-intro { grid-template-columns: 1fr; }
+      .rouge-demo-grid { grid-template-columns: 1fr; }
     }
 
-    details.other-projects,
-    details.web-more {
+    details.other-projects {
       margin: 4px 16px 18px 16px;
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
     }
-    details.other-projects summary,
-    details.web-more summary {
+    details.other-projects summary {
       cursor: pointer;
       padding: 10px 16px;
       background: #f5f5f5;
@@ -169,24 +209,19 @@
       list-style: none;
       user-select: none;
     }
-    details.other-projects summary::-webkit-details-marker,
-    details.web-more summary::-webkit-details-marker { display: none; }
-    details.other-projects summary::after,
-    details.web-more summary::after {
+    details.other-projects summary::-webkit-details-marker { display: none; }
+    details.other-projects summary::after {
       content: "+";
       float: right;
       color: #888;
       font-weight: 400;
     }
-    details.other-projects[open] summary::after,
-    details.web-more[open] summary::after { content: "\2212"; }
-    details.other-projects[open] summary,
-    details.web-more[open] summary {
+    details.other-projects[open] summary::after { content: "\2212"; }
+    details.other-projects[open] summary {
       border-radius: 8px 8px 0 0;
       border-bottom: none;
     }
-    details.other-projects ul,
-    details.web-more ul {
+    details.other-projects ul {
       margin: 0;
       padding: 12px 18px 12px 36px;
       background: #fafafa;
@@ -194,15 +229,13 @@
       border-top: none;
       border-radius: 0 0 8px 8px;
     }
-    details.other-projects li,
-    details.web-more li {
+    details.other-projects li {
       margin: 6px 0;
       font-size: 14px;
       line-height: 1.5;
       color: #333;
     }
-    details.other-projects li .meta,
-    details.web-more li .meta {
+    details.other-projects li .meta {
       color: #777;
       font-style: italic;
       font-size: 12px;
@@ -778,168 +811,66 @@
             </ul>
           </details>
 
-          <!-- ============== WEB APPS ============== -->
+          <!-- ============== ROUGE APPLICATIONS ============== -->
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
               <tr>
                 <td style="padding:16px;width:100%;vertical-align:middle">
-                  <h2>Web &amp; Mobile Apps</h2>
+                  <h2>Rouge Applications &amp; Apps</h2>
                 </td>
               </tr>
             </tbody>
           </table>
 
-          <table
-            style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-
-              <tr>
-                <td style="padding:16px;width:20%;vertical-align:top">
-                  <a href="https://rougeapps.ca">
-                    <img class="proj-thumb" src="souren/pictures/rouge-localeyes.svg" alt="Rouge Applications / LocalEyes">
-                  </a>
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:top">
-                  <a href="https://rougeapps.ca">
-                    <span class="papertitle">Rouge Applications / LocalEyes</span>
-                  </a>
-                  <br>
-                  <strong>Souren Pashangpour</strong>, Mahyar Tajeri, Gibran Rajput
-                  <br>
-                  <em>Software and sensing systems</em>
-                  <br>
+          <div class="rouge-apps">
+            <div class="rouge-intro">
+              <a href="https://rougeapps.ca">
+                <img src="souren/pictures/rouge-localeyes.svg" alt="Rouge Applications">
+              </a>
+              <div>
+                <a href="https://rougeapps.ca">
+                  <span class="papertitle">Rouge Applications</span>
+                </a>
+                <br>
+                <strong>Souren Pashangpour</strong>, Mahyar Tajeri, Gibran Rajput
+                <p>A small project site for deployed web apps, mobile apps, and sensing-system demos.</p>
+                <div class="rouge-links">
                   <a href="https://rougeapps.ca">website</a>
                   /
-                  <a href="https://rougeapps.ca/demos/">demos</a>
-                  <p></p>
-                  <p>
-                    Rouge Applications hosts LocalEyes and selected deployed software demos. LocalEyes is a
-                    decentralized camera-based sensing project for early detection and real-time 3D tracking
-                    of airborne objects using low-cost commodity cameras rather than radar.
-                  </p>
-                </td>
-              </tr>
+                  <a href="https://rougeapps.ca/demos/">View all Rouge demos &rarr;</a>
+                </div>
+              </div>
+            </div>
 
-              <tr>
-                <td style="padding:16px;width:20%;vertical-align:top">
-                  <a href="https://rougeapps.ca/demo/dirtdeposit/">
-                    <img class="proj-thumb" src="souren/pictures/dirt-deposit-portal.png" alt="Dirt Deposit Manager portal">
-                  </a>
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:top">
-                  <a href="https://rougeapps.ca/demo/dirtdeposit/">
-                    <span class="papertitle">Dirt Deposit Manager</span>
-                  </a>
-                  <br>
-                  <strong>Souren Pashangpour</strong>, Mahyar Tajeri
-                  <br>
-                  <em>Web app built for <a href="https://fredspaving.com">Fred's Paving</a></em>
-                  <br>
-                  <a href="https://rougeapps.ca/demo/dirtdeposit/">demo</a>
-                  <p></p>
-                  <p>
-                    Excavation and road work crews have to dump their dirt somewhere, usually farmland,
-                    but every load needs to be analyzed first, and every truck carries a paper ticket
-                    that has to be reconciled by hand. We built a digital system to replace the paper trail:
-                    each truck's deposit is tracked, every analysis is attached to a load, and the whole chain
-                    is searchable and auditable. Designed for and deployed with
-                    <a href="https://fredspaving.com">Fred's Paving</a>.
-                  </p>
-                </td>
-              </tr>
-
-              <tr>
-                <td style="padding:16px;width:20%;vertical-align:top">
-                  <a href="https://rougeapps.ca/demo/abo/login.php">
-                    <img class="proj-thumb" src="souren/pictures/abo-platform.png" alt="ABO Autism care-session platform">
-                  </a>
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:top">
-                  <a href="https://rougeapps.ca/demo/abo/login.php">
-                    <span class="papertitle">ABO Autism Care-Session Platform</span>
-                  </a>
-                  <br>
-                  <strong>Souren Pashangpour</strong>, Mahyar Tajeri
-                  <br>
-                  <em>Internal web app</em>
-                  <br>
-                  <a href="https://rougeapps.ca/demo/abo/login.php">demo</a>
-                  <p></p>
-                  <p>
-                    Built a custom internal web app with Mahyar for an at-home autism care provider after my
-                    wife started working there and we saw they did not yet have software for managing therapist
-                    visits. The platform let therapists log in, record home-session notes, document what
-                    happened during visits, and sign off on completed sessions, while admins could oversee the
-                    records through a separate admin login. It was built to replace ad hoc manual tracking with
-                    a structured workflow for therapists visiting autistic children at home.
-                  </p>
-                </td>
-              </tr>
-
-              <tr>
-                <td style="padding:16px;width:20%;vertical-align:top">
-                  <a href="https://apps.apple.com/ca/app/gohabits/id6503245014">
-                    <div class="app-cycler" aria-label="GoHabits screenshots">
-                      <img src="souren/pictures/gohabits/screenshot_01.png" alt="">
-                      <img src="souren/pictures/gohabits/screenshot_02.png" alt="">
-                      <img src="souren/pictures/gohabits/screenshot_03.png" alt="">
-                      <img src="souren/pictures/gohabits/screenshot_04.png" alt="">
-                      <img src="souren/pictures/gohabits/screenshot_05.png" alt="">
-                      <img src="souren/pictures/gohabits/screenshot_06.png" alt="">
-                      <img src="souren/pictures/gohabits/screenshot_07.png" alt="">
-                      <img src="souren/pictures/gohabits/screenshot_08.png" alt="">
-                      <img src="souren/pictures/gohabits/screenshot_09.png" alt="">
-                    </div>
-                  </a>
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:top">
-                  <a href="https://apps.apple.com/ca/app/gohabits/id6503245014">
-                    <span class="papertitle">GoHabits</span>
-                  </a>
-                  <br>
-                  Mahyar Tajeri, <strong>Souren Pashangpour</strong>
-                  <br>
-                  <em>iOS app</em>
-                  <br>
-                  <a href="https://apps.apple.com/ca/app/gohabits/id6503245014">App&nbsp;Store</a>
-                  <p></p>
-                  <p>
-                    Built and shipped an iOS habit-tracking app with Mahyar Tajeri, listed on the App Store under
-                    GoHabits Inc. as a productivity app with the tagline &ldquo;Craft your dream life.&rdquo;
-                    GoHabits helps users build routines, track habits, journal progress, and stay accountable
-                    through community features like a social circle, home feed, profile pages, habit pages,
-                    comments, group chats, and upcoming &ldquo;Monk Mode&rdquo; / GoAI features. We also showcased
-                    GoHabits at Collision&nbsp;2023.
-                  </p>
-                </td>
-              </tr>
-
-            </tbody>
-          </table>
-
-          <details class="web-more">
-            <summary>More Rouge Applications demos</summary>
-            <ul>
-              <li>
-                <a href="https://rougeapps.ca/survey-uhn/verify.php"><strong>UHN Survey</strong></a>
-                <span class="meta">verified-access research survey platform</span>
-                <br>
-                A small verified-access web platform built for a University Health Network research study.
-              </li>
-              <li>
-                <a href="https://rougeapps.ca/addata/"><strong>AD Data Packages</strong></a>
-                <span class="meta">LocalEyes capture-session catalog</span>
-                <br>
-                A public-facing catalog for LocalEyes multi-camera capture sessions, calibration data, and replay packages.
-              </li>
-              <li>
-                <a href="https://rougeapps.ca/demos/"><strong>All Rouge Applications demos</strong></a>
-                <br>
-                A compact index of the live demos hosted through Rouge Applications.
-              </li>
-            </ul>
-          </details>
+            <div class="rouge-demo-grid">
+              <a class="rouge-demo-card" href="https://rougeapps.ca/demo/abo/login.php">
+                <strong>ABO</strong>
+                <span>Care-session records and workflow platform for an at-home autism care provider.</span>
+                <em>Open</em>
+              </a>
+              <a class="rouge-demo-card" href="https://rougeapps.ca/demo/dirtdeposit/">
+                <strong>Dirt Deposit</strong>
+                <span>Soil disposal coordination for sites, loads, tickets, and hauling logistics.</span>
+                <em>Open</em>
+              </a>
+              <a class="rouge-demo-card" href="https://apps.apple.com/ca/app/gohabits/id6503245014">
+                <strong>GoHabits</strong>
+                <span>iOS habit-building app for routines, streaks, journaling, and accountability.</span>
+                <em>App Store</em>
+              </a>
+              <a class="rouge-demo-card" href="https://rougeapps.ca/survey-uhn/verify.php">
+                <strong>UHN Survey</strong>
+                <span>Verified-access survey platform built for a University Health Network research study.</span>
+                <em>Open</em>
+              </a>
+              <a class="rouge-demo-card" href="https://rougeapps.ca/addata/">
+                <strong>LocalEyes Data Catalog</strong>
+                <span>LocalEyes capture-session catalog for multi-camera data, calibrations, and replay packages.</span>
+                <em>Public demo</em>
+              </a>
+            </div>
+          </div>
 
           <!-- ============== MISCELLANEA ============== -->
           <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;">
