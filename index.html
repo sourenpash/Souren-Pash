@@ -152,11 +152,13 @@
       100%    { opacity: 0; }
     }
 
-    details.other-projects {
+    details.other-projects,
+    details.web-more {
       margin: 4px 16px 18px 16px;
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
     }
-    details.other-projects summary {
+    details.other-projects summary,
+    details.web-more summary {
       cursor: pointer;
       padding: 10px 16px;
       background: #f5f5f5;
@@ -167,19 +169,24 @@
       list-style: none;
       user-select: none;
     }
-    details.other-projects summary::-webkit-details-marker { display: none; }
-    details.other-projects summary::after {
+    details.other-projects summary::-webkit-details-marker,
+    details.web-more summary::-webkit-details-marker { display: none; }
+    details.other-projects summary::after,
+    details.web-more summary::after {
       content: "+";
       float: right;
       color: #888;
       font-weight: 400;
     }
-    details.other-projects[open] summary::after { content: "\2212"; }
-    details.other-projects[open] summary {
+    details.other-projects[open] summary::after,
+    details.web-more[open] summary::after { content: "\2212"; }
+    details.other-projects[open] summary,
+    details.web-more[open] summary {
       border-radius: 8px 8px 0 0;
       border-bottom: none;
     }
-    details.other-projects ul {
+    details.other-projects ul,
+    details.web-more ul {
       margin: 0;
       padding: 12px 18px 12px 36px;
       background: #fafafa;
@@ -187,13 +194,15 @@
       border-top: none;
       border-radius: 0 0 8px 8px;
     }
-    details.other-projects li {
+    details.other-projects li,
+    details.web-more li {
       margin: 6px 0;
       font-size: 14px;
       line-height: 1.5;
       color: #333;
     }
-    details.other-projects li .meta {
+    details.other-projects li .meta,
+    details.web-more li .meta {
       color: #777;
       font-style: italic;
       font-size: 12px;
@@ -309,9 +318,10 @@
                     long-horizon planning to behave safely, expressively, and usefully around people.
                   </p>
                   <p>
-                    Outside the lab, I enjoy weightlifting, archery, Brazilian jiu-jitsu, and being outdoors.
-                    I also take pride in taking care of my 1989 IROC-Z28 Camaro, which has become its own
-                    long-running mechanical project.
+                    I also keep a small project site, <a href="https://rougeapps.ca">Rouge Applications</a>,
+                    for LocalEyes and a few deployed web-application demos. Away from the computer, I enjoy
+                    weightlifting, archery, Brazilian jiu-jitsu, being outdoors, and taking care of my
+                    1989 IROC-Z28 Camaro.
                   </p>
                   <p style="text-align:center">
                     <a href="mailto:sourenpashangpour@gmail.com">Email</a> &nbsp;/&nbsp;
@@ -512,10 +522,12 @@
 
               <tr id="localeyes">
                 <td style="padding:16px;width:20%;vertical-align:top">
-                  <a href="https://youtu.be/CTPjWSD2xwU"><img class="proj-thumb" src="souren/pictures/localeye%20thumbnail.png" alt="LocalEyes"></a>
+                  <a href="https://rougeapps.ca"><img class="proj-thumb" src="souren/pictures/localeye%20thumbnail.png" alt="LocalEyes"></a>
                 </td>
                 <td style="padding:8px;width:80%;vertical-align:top">
-                  <span class="papertitle">LocalEyes &mdash; Low-Cost Distributed 3D Tracking System</span>
+                  <a href="https://rougeapps.ca">
+                    <span class="papertitle">LocalEyes &mdash; Low-Cost Distributed 3D Tracking System</span>
+                  </a>
                   <br>
                   <strong>Souren Pashangpour</strong>,
                   Mahyar Tajeri,
@@ -523,6 +535,8 @@
                   <br>
                   <em>2025</em>
                   <br>
+                  <a href="https://rougeapps.ca">website</a>
+                  /
                   <a href="https://youtu.be/CTPjWSD2xwU">video</a>
                   <p></p>
                   <div class="lab-nav">
@@ -782,6 +796,33 @@
 
               <tr>
                 <td style="padding:16px;width:20%;vertical-align:top">
+                  <a href="https://rougeapps.ca">
+                    <img class="proj-thumb" src="souren/pictures/rouge-localeyes.svg" alt="Rouge Applications / LocalEyes">
+                  </a>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:top">
+                  <a href="https://rougeapps.ca">
+                    <span class="papertitle">Rouge Applications / LocalEyes</span>
+                  </a>
+                  <br>
+                  <strong>Souren Pashangpour</strong>, Mahyar Tajeri, Gibran Rajput
+                  <br>
+                  <em>Software and sensing systems</em>
+                  <br>
+                  <a href="https://rougeapps.ca">website</a>
+                  /
+                  <a href="https://rougeapps.ca/demos/">demos</a>
+                  <p></p>
+                  <p>
+                    Rouge Applications hosts LocalEyes and selected deployed software demos. LocalEyes is a
+                    decentralized camera-based sensing project for early detection and real-time 3D tracking
+                    of airborne objects using low-cost commodity cameras rather than radar.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:16px;width:20%;vertical-align:top">
                   <a href="https://rougeapps.ca/demo/dirtdeposit/">
                     <img class="proj-thumb" src="souren/pictures/dirt-deposit-portal.png" alt="Dirt Deposit Manager portal">
                   </a>
@@ -859,7 +900,9 @@
                   <br>
                   Mahyar Tajeri, <strong>Souren Pashangpour</strong>
                   <br>
-                  <em>iOS app &mdash; <a href="https://apps.apple.com/ca/app/gohabits/id6503245014">App&nbsp;Store</a></em>
+                  <em>iOS app</em>
+                  <br>
+                  <a href="https://apps.apple.com/ca/app/gohabits/id6503245014">App&nbsp;Store</a>
                   <p></p>
                   <p>
                     Built and shipped an iOS habit-tracking app with Mahyar Tajeri, listed on the App Store under
@@ -874,6 +917,29 @@
 
             </tbody>
           </table>
+
+          <details class="web-more">
+            <summary>More Rouge Applications demos</summary>
+            <ul>
+              <li>
+                <a href="https://rougeapps.ca/survey-uhn/verify.php"><strong>UHN Survey</strong></a>
+                <span class="meta">verified-access research survey platform</span>
+                <br>
+                A small verified-access web platform built for a University Health Network research study.
+              </li>
+              <li>
+                <a href="https://rougeapps.ca/addata/"><strong>AD Data Packages</strong></a>
+                <span class="meta">LocalEyes capture-session catalog</span>
+                <br>
+                A public-facing catalog for LocalEyes multi-camera capture sessions, calibration data, and replay packages.
+              </li>
+              <li>
+                <a href="https://rougeapps.ca/demos/"><strong>All Rouge Applications demos</strong></a>
+                <br>
+                A compact index of the live demos hosted through Rouge Applications.
+              </li>
+            </ul>
+          </details>
 
           <!-- ============== MISCELLANEA ============== -->
           <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;">
@@ -929,7 +995,8 @@
                 </div>
                 <div class="role-detail">
                   Teach C++ and ROS&nbsp;2 fundamentals to 4th-year engineers; design contests; manage 6 TAs.
-                  Hired to lead the migration from TurtleBot&nbsp;2 / ROS&nbsp;1 to TurtleBot&nbsp;4 / ROS&nbsp;2 with new starter code.
+                  One of three people hired to redesign the course around TurtleBot&nbsp;4 / ROS&nbsp;2, including
+                  course content, starter code, technical infrastructure, and contest structure.
                 </div>
               </div>
               <div class="entry">
@@ -937,7 +1004,11 @@
                   <a href="https://www.mie.utoronto.ca/wp-content/uploads/2021/03/MIE_1070S_Course_Syllabus.pdf">MIE&nbsp;1070 &mdash; Intelligent Healthcare Robots</a>
                   <span class="meta">TA</span>
                 </div>
-                <div class="role-detail">Graduate course on robots for clinical and home-care settings.</div>
+                <div class="role-detail">
+                  Advise graduate students as they design intelligent robots for human-centered environments,
+                  guiding project scoping, autonomy and multimodal-sensing choices, human&ndash;robot interaction
+                  design, and the practical tradeoffs behind assistive and service robotics concepts.
+                </div>
               </div>
               <div class="entry">
                 <div class="role-line">
