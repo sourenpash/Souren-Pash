@@ -19,10 +19,11 @@
       width: 160px;
       height: 160px;
       object-fit: contain;
-      background: #fafafa;
-      border: 1px solid #ececec;
+      background: transparent;
+      border: 0;
       border-radius: 6px;
       display: block;
+      mix-blend-mode: multiply;
     }
     .breadbot-cycler {
       position: relative;
@@ -30,8 +31,8 @@
       height: 160px;
       border-radius: 6px;
       overflow: hidden;
-      background: #fafafa;
-      border: 1px solid #ececec;
+      background: transparent;
+      border: 0;
     }
     .breadbot-cycler img,
     .breadbot-cycler video {
@@ -47,6 +48,7 @@
     }
     .breadbot-cycler img {
       object-fit: contain;
+      mix-blend-mode: multiply;
     }
     .breadbot-cycler video:nth-child(1) { animation-delay: 0s; }
     .breadbot-cycler img:nth-child(2) { animation-delay: 6s; }
@@ -120,8 +122,8 @@
     .rouge-apps {
       margin: 0 16px 18px 16px;
       padding: 16px;
-      background: #fbfaf7;
-      border: 1px solid #e3ded2;
+      background: #fff;
+      border: 1px solid #e1e1dc;
       border-radius: 8px;
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
     }
@@ -159,15 +161,15 @@
       min-height: 122px;
       flex-direction: column;
       padding: 12px;
-      border: 1px solid #e3ded2;
+      border: 1px solid #e1e1dc;
       border-radius: 8px;
       background: #fff;
       color: #333;
       transition: border-color 0.15s ease, background-color 0.15s ease;
     }
     .rouge-demo-card:hover {
-      border-color: #b9aa8d;
-      background: #fffdf8;
+      border-color: #c5c5bb;
+      background: #fbfbf8;
       color: #333;
     }
     .rouge-demo-card strong {
@@ -254,7 +256,8 @@
       object-fit: cover;
       border-radius: 6px;
       flex-shrink: 0;
-      border: 1px solid #e0e0e0;
+      border: 0;
+      mix-blend-mode: multiply;
     }
 
     .video-embed {
@@ -351,8 +354,9 @@
                     long-horizon planning to behave safely, expressively, and usefully around people.
                   </p>
                   <p>
-                    I also keep a small project site, <a href="https://rougeapps.ca">Rouge Applications</a>,
-                    for LocalEyes and a few deployed web-application demos. Away from the computer, I enjoy
+                    Outside the lab, I work on practical software, data tooling, and sensing-system demos through
+                    <a href="https://rougeapps.ca">Rouge Applications</a>, a small engineering company I build
+                    with longtime friends and engineering collaborators. Away from the computer, I enjoy
                     weightlifting, archery, Brazilian jiu-jitsu, being outdoors, and taking care of my
                     1989 IROC-Z28 Camaro.
                   </p>
@@ -799,10 +803,6 @@
                 too lazy to clean my gallery manually and didn't want to pay for an App Store app.
               </li>
               <li>
-                <strong>TheTutors Website</strong>
-                &mdash; <a href="https://thetutors.company/">thetutors.company</a>
-              </li>
-              <li>
                 <strong>Machine-Learning Side Projects</strong>
                 <br>
                 A failed-3D-print detection model trained on scraped images, and OpenCV image-sorting tools
@@ -834,7 +834,7 @@
                 </a>
                 <br>
                 <strong>Souren Pashangpour</strong>, Mahyar Tajeri, Gibran Rajput
-                <p>A small project site for deployed web apps, mobile apps, and sensing-system demos.</p>
+                <p>A small engineering company for deployed web apps, mobile apps, data tools, and sensing-system demos.</p>
                 <div class="rouge-links">
                   <a href="https://rougeapps.ca">website</a>
                   /
@@ -865,9 +865,14 @@
                 <em>Open</em>
               </a>
               <a class="rouge-demo-card" href="https://rougeapps.ca/addata/">
-                <strong>LocalEyes Data Catalog</strong>
-                <span>LocalEyes capture-session catalog for multi-camera data, calibrations, and replay packages.</span>
-                <em>Public demo</em>
+                <strong>Git-Like Data Manager</strong>
+                <span>Self-hosted data package management for large research datasets, with uploads, search, pull commands, storage tracking, and recovery workflows.</span>
+                <em>Open</em>
+              </a>
+              <a class="rouge-demo-card" href="https://thetutors.company/">
+                <strong>TheTutors</strong>
+                <span>Public website for a tutoring service, including program information and contact paths.</span>
+                <em>Open</em>
               </a>
             </div>
           </div>
